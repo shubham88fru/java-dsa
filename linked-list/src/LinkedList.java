@@ -6,10 +6,10 @@ public class LinkedList<T extends Comparable<T>> implements Cloneable {
 
     public void addToEnd(T data) {
         if (head == null) {
-            head = new Node<T>(data);
+            head = new Node<T>(data); // first node.
         } else {
             Node<T> curr = head;
-            while (curr.getNext() != null) {
+            while (curr.getNext() != null) { // reach the last node.
                 curr = curr.getNext();
             }
             curr.setNext(new Node<T>(data));
@@ -19,10 +19,10 @@ public class LinkedList<T extends Comparable<T>> implements Cloneable {
     public T popFirst() {
         if (head != null) {
             T topElement = head.getData();
-            head = head.getNext();
+            head = head.getNext(); // head points to next
             return topElement;
         }
-        return null;
+        return null; // Nothing to remove
     }
 
     public int countNodes() {
