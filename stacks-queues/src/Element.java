@@ -1,5 +1,6 @@
 // We'll implement a stack using
-// a linked list
+// a linked list. Element is same as Node
+// Stacks can be implemented using arrays also
 public class Element<T> {
     private T data;
     private Element<T> next;
