@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class StackOverflowException {
+public class StackOverflowException extends Exception {
 }

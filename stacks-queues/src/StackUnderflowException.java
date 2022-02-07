@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class StackUnderflowException {
+public class StackUnderflowException extends Exception {
 }
