@@ -1,6 +1,6 @@
 public class O1MinElementFromStack {
-    private Stack<Integer> stack = new Stack<>();
-    private Stack<Integer> minStack = new Stack<>();
+    private final Stack<Integer> stack = new Stack<>();
+    private final Stack<Integer> minStack = new Stack<>();
 
     public void push(int data) throws StackUnderflowException, StackOverflowException {
         int min = data;
