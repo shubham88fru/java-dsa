@@ -1,3 +1,5 @@
+package stack;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -17,20 +19,20 @@ public class MatchParenthesis {
     public static boolean hasMatchingParens(String input) {
         try {
             Stack<Character> parenStack = new Stack<>();
-            for(int i = 0; i<input.length(); i++) {
+            for (int i = 0; i < input.length(); i++) {
                 char ch = input.charAt(i);
                 if (openingParenSet.contains(ch)) parenStack.push(ch);
 
-                if(matchingParenMap.containsKey(ch)) {
+                if (matchingParenMap.containsKey(ch)) {
                     Character lastParen = parenStack.pop();
-                    if(lastParen != matchingParenMap.get(ch)) return false;
+                    if (lastParen != matchingParenMap.get(ch)) return false;
                 }
             }
             return parenStack.isEmpty();
         } catch (StackOverflowException e) {
-            System.err.println("Stack Overflow!!!");
+            System.err.println("stack.Stack Overflow!!!");
         } catch (StackUnderflowException e) {
-            System.err.println("Stack Underflow!!!");
+            System.err.println("stack.Stack Underflow!!!");
         }
         return true;
     }

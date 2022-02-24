@@ -1,3 +1,5 @@
+package stack;
+
 public class Stack<T> {
     private static final int MAX_SIZE = 40;
     private Element<T> top;

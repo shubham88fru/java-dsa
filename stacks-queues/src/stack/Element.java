@@ -1,5 +1,7 @@
+package stack;
+
 // We'll implement a stack using
-// a linked list. Element is same as Node
+// a linked list. stack.Element is same as Node
 // Stacks can be implemented using arrays also
 public class Element<T> {
     private T data;

@@ -1,3 +1,5 @@
+package stack;
+
 public class O1MinElementFromStack {
     private final Stack<Integer> stack = new Stack<>();
     private final Stack<Integer> minStack = new Stack<>();
@@ -5,7 +7,7 @@ public class O1MinElementFromStack {
     public void push(int data) throws StackUnderflowException, StackOverflowException {
         int min = data;
         if (!minStack.isEmpty()) {
-            if(min>minStack.peek()) {
+            if (min > minStack.peek()) {
                 min = minStack.peek();
             }
         }
