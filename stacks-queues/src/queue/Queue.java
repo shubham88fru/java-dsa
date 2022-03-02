@@ -2,6 +2,7 @@ package queue;
 
 import java.lang.reflect.Array;
 
+// Queue using a circular Array.
 public class Queue<T> {
     private static final int SPECIAL_EMPTY_VALUE = -1;
     private static int MAX_SIZE = 40;
