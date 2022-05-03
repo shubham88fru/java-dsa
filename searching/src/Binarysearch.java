@@ -32,4 +32,23 @@ public class Binarysearch {
         }
         return head;
     }
+
+    public static Node<Integer> lookup(Node<Integer> head, int data) {
+        //no match
+        if (head == null) {
+            return null;
+        }
+
+        //match
+        if (head.getData() == data) {
+            return head;
+        }
+
+        //which subtree to look into
+        if (data <= head.getData()) {
+            return lookup(head.getLeftChild(), data);
+        } else {
+            return lookup(head.getRightChild(), data);
+        }
+    }
 }
