@@ -36,6 +36,9 @@ public abstract class Heap<T extends Comparable> {
         return (index -1) / 2;
     }
 
+    abstract protected void siftDown(int index);
+    abstract protected void siftUp(int index);
+
     protected void swap(int index1, int index2) {
         T tempValue = array[index1];
         array[index1] = array[index2];
